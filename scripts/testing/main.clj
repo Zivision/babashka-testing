@@ -1,6 +1,5 @@
-(ns testing.main)
+(ns testing.main
+  (:require [medley.core :as m]))
 
-(defn -main
-  "Main function for testing"
-  [& _args]
-  (println "Hello World"))
+(defn -main [& _args]
+  (prn (m/index-by :id [{:id 1} {:id 2}])))

@@ -1,2 +1,2 @@
-{:paths ["scripts"]                     ; Select root folder of choice
- :deps {}}                              ; No dependencies for this version
+{:paths ["scripts"] ; Select root folder of choice
+ :deps {medley/medley {:mvn/version "1.3.0"}}} ; No dependencies for this example

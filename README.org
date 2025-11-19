@@ -1,4 +1,38 @@
 #+title: Babashka Testing
 
-*  About
-This project is me just Messing around with babashka.
+This project is me just messing around with babashka.
+
+*  Table of contents :toc:
+-  [[#scripts][Scripts]]
+  -  [[#basic-setup][Basic Setup]]
+  -  [[#arguments][Arguments]]
+
+*  Scripts
+**  Basic Setup
+For basic setup we will first need to make a bb.edn file.
+#+begin_src clojure
+{:paths ["scripts"] ; Select root folder of choice
+ :deps {medley/medley {:mvn/version "1.3.0"}}} ; No dependencies for this example
+#+end_src
+
+Here is an example script we will run
+#+begin_src clojure
+(ns testing.main)
+
+(defn -main
+  "Main function for testing"
+  [& _args]
+  (println "Hello World"))
+#+end_src
+
+**  Arguments
+To run scripts with arguments. we can do as such
+#+begin_src clojure
+(ns testing.main
+  (:require [medley.core :as m])) ; Need medley for this one
+
+(defn -main
+  "Main function for testing"
+  [& _args]
+  (prn (m/index-by :id [{:id 1} {:id 2}]))) ; Expects two ids
+#+end_src

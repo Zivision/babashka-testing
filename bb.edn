@@ -1,0 +1,2 @@
+{:paths ["scripts"]                     ; Select root folder of choice
+ :deps {}}                              ; No dependencies for this version
